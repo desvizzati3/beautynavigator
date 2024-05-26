@@ -6,7 +6,7 @@
             <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
           </div>
           <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4">
+            <div class="ml-10 flex items-baseline space-x-4 mr-20">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="/" 
               class=" {{ request() -> is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} rounded-md px-3 py-2 text-sm font-medium" 
@@ -14,11 +14,19 @@
               <a href="/fmm" 
               class=" {{ request() -> is('fmm') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} rounded-md px-3 py-2 text-sm font-medium" 
                               aria-current="page">Find My Makeup</a>
-              
-              
+              <div>
+                <div class="flex max-w-md gap-x-4 ml-30">
+                  <form action="" method="">
+          <label for="search" class="sr-only">Search</label>
+          <input id="email-address" name="email" type="text"  required class="w-80 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Search">
+          <button type="submit" class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Search</button>
+                  </form>
+        </div>
+            </div>
             </div>
             
           </div>
+          
         </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">

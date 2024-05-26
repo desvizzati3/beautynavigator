@@ -1,12 +1,98 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-    content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.vue",
-    ],
-    theme: {
-        extend: {},
+module.exports = {
+    purge: {
+        content: [
+            "./resources/**/*.blade.php",
+            "./resources/**/*.js",
+            "./resources/**/*.vue",
+        ],
     },
-    plugins: [],
+    theme: {
+        extend: {
+            width: {
+                96: "24rem",
+                128: "32rem",
+                160: "40rem",
+                192: "48rem",
+                224: "56rem",
+                256: "64rem",
+                288: "72rem",
+                320: "80rem",
+                352: "88rem",
+                384: "96rem",
+                416: "104rem",
+                448: "112rem",
+                480: "120rem",
+                512: "128rem",
+                544: "136rem",
+                576: "144rem",
+                608: "152rem",
+                640: "160rem",
+                672: "168rem",
+                704: "176rem",
+                736: "184rem",
+                768: "192rem",
+                800: "200rem",
+                832: "208rem",
+                864: "216rem",
+                896: "224rem",
+                928: "232rem",
+                960: "240rem",
+                992: "248rem",
+                1024: "256rem",
+                1056: "264rem",
+                1088: "272rem",
+                1120: "280rem",
+                1152: "288rem",
+                1184: "296rem",
+                1216: "304rem",
+                1248: "312rem",
+                1280: "320rem",
+                1312: "328rem",
+                1344: "336rem",
+                1376: "344rem",
+                1408: "352rem",
+                1440: "360rem",
+                1472: "368rem",
+                1504: "376rem",
+                1536: "384rem",
+                1568: "392rem",
+                1600: "400rem",
+                1632: "408rem",
+                1664: "416rem",
+                1696: "424rem",
+                1728: "432rem",
+                1760: "440rem",
+                1792: "448rem",
+                1824: "456rem",
+                1856: "464rem",
+                1888: "472rem",
+                1920: "480rem",
+                30: "7.5rem",
+            },
+            height: {
+                30: "7.5rem",
+            },
+            spacing: {
+                64: "16rem",
+                30: "7.5rem",
+            },
+        },
+    },
+    variants: {},
+    plugins: [
+        
+            function ({ addUtilities }) {
+                addUtilities({
+                    ".hide-scrollbar": {
+                        "scrollbar-width": "none" /* Firefox */,
+                        "-ms-overflow-style":
+                            "none" /* Internet Explorer 10+ */,
+                    },
+                    ".hide-scrollbar::-webkit-scrollbar": {
+                        display: "none" /* Safari and Chrome */,
+                    },
+                });
+            },
+        
+    ],
 };

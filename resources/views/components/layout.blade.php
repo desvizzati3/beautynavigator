@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
+<html lang="en" class="h-full bg-gray-100 hide-scrollbar" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>{{ $title }}</title>
 </head>
-<body class="h-full">
+<body class="h-full hide-scrollbar  ">
     <!--
   This example requires updating your template:
 
@@ -29,6 +29,6 @@
     </div>
   </main>
 </div>
-
+<x-footer>{{ $title }}</x-footer>
 </body>
 </html>

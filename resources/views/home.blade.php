@@ -20,39 +20,17 @@
      x-init="loop"
      >
      <!-- Data Loop -->
-    <template x-for="slide in slides" :key="slide.id">
-        <div x-show="activeSlide === slide.id" class="p-16 h-64 flex items-center bg-slate-500 text-white rounded-lg">
-            <div>
-                <h2 class="font-bold text-2xl" x-text="slide.title"></h2>
-                <p x-text="slide.body" class="text-base"></p>
+        <template x-for="slide in slides" :key="slide.id">
+            <div x-show="activeSlide === slide.id" class="p-16 h-64 flex items-center bg-slate-500 text-white rounded-lg">
+                <div>
+                    <h2 class="font-bold text-2xl" x-text="slide.title"></h2>
+                    <p x-text="slide.body" class="text-base"></p>
+                </div>
             </div>
-        </div>
-    </template>
+        </template>
 
-
-
-    <!-- Back/Next -->
-    <div class="absolute inset-0 flex">
-        <div class="flex items-center justify-start w-1/2">
-            <button 
-            x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1"
-            class="bg-slate-100 text-slate-500 hover:bg-blue-500 hover:text-white transition font-bold rounded-full w-12 h-12 shadow items-center text-center flex justify-center -ml-16">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-            </button>
-        </div>
-        <div class="flex items-center justify-end w-1/2">
-            <button 
-            x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1"
-            class="bg-slate-100 text-slate-500 hover:bg-blue-500 hover:text-white transition font-bold rounded-full w-12 h-12 shadow items-center text-center flex justify-center -mr-16">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-               </svg>
-            </button>
-        </div>
-    </div>
-
+    
+    
     <!-- Buttons -->
     <div class="absolute w-full flex items-center justify-center px-4 mt-3">
         <template x-for="slide in slides" :key="slide.id">
@@ -66,6 +44,70 @@
             </button>
         </template>
     </div>
+
+    <div class="max-w bg-pink-200 py-8 mt-20">
+
+     <div class="flex justify-center mt-20 relative z-20">
+        <button 
+            type="button" 
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-80 h-20 flex items-center justify-center"
+            onclick="window.location.href='{{ route('fmm') }}';">
+            Find My Makeup!
+        </button>
+    </div>
+
+    </div>
+
+    <div class="grid grid-cols-5 gap-4 mt-20 justify-center items-center">
+        <a href="{{ route('fmm') }}">
+        <div class="flex flex-col items-center overflow-hidden">
+        <div class="bg-pink-500 rounded-full h-30 w-30 justify-center items-center">
+            <img src="{{ asset('fotomark.jpg') }}" class="w-full h-full object-cover object-center rounded-full" />
+        </div>
+        <p class="mt-2">Capt</p>
+        </div>
+        </a>
+
+        <a href="{{ route('fmm') }}">
+        <div class="flex flex-col items-center overflow-hidden">
+        <div class="bg-pink-500 rounded-full h-30 w-30 justify-center items-center">
+            <img src="{{ asset('fotomark.jpg') }}" class="w-full h-full object-cover object-center rounded-full" />
+        </div>
+        <p class="mt-2">Capt</p>
+        </div>
+        </a>
+
+        <a href="{{ route('fmm') }}">
+        <div class="flex flex-col items-center overflow-hidden">
+        <div class="bg-pink-500 rounded-full h-30 w-30 justify-center items-center">
+            <img src="{{ asset('fotomark.jpg') }}" class="w-full h-full object-cover object-center rounded-full" />
+        </div>
+        <p class="mt-2">Capt</p>
+        </div>
+        </a>
+
+        <a href="{{ route('fmm') }}">
+        <div class="flex flex-col items-center overflow-hidden">
+        <div class="bg-pink-500 rounded-full h-30 w-30 justify-center items-center">
+            <img src="{{ asset('fotomark.jpg') }}" class="w-full h-full object-cover object-center rounded-full" />
+        </div>
+        <p class="mt-2">Capt</p>
+        </div>
+        </a>
+
+        <a href="{{ route('fmm') }}">
+        <div class="flex flex-col items-center overflow-hidden">
+        <div class="bg-pink-500 rounded-full h-30 w-30 justify-center items-center">
+            <img src="{{ asset('fotomark.jpg') }}" class="w-full h-full object-cover object-center rounded-full" />
+        </div>
+        <p class="mt-2">Capt</p>
+        </div>  
+        </a>      
+    </div>
+
+     <!-- Footer -->
     
+    
+       
 </x-layout>
 
