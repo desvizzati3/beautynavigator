@@ -8,6 +8,13 @@ module.exports = {
     },
     theme: {
         extend: {
+            fontFamily: {
+                stonewaller: ["Stonewaller", "sans-serif"],
+            },
+            colors: {
+                "custom-color-text": "#17464d",
+                "custom-color-text-2": "#333500",
+            },
             width: {
                 96: "24rem",
                 128: "32rem",
@@ -80,19 +87,16 @@ module.exports = {
     },
     variants: {},
     plugins: [
-        
-            function ({ addUtilities }) {
-                addUtilities({
-                    ".hide-scrollbar": {
-                        "scrollbar-width": "none" /* Firefox */,
-                        "-ms-overflow-style":
-                            "none" /* Internet Explorer 10+ */,
-                    },
-                    ".hide-scrollbar::-webkit-scrollbar": {
-                        display: "none" /* Safari and Chrome */,
-                    },
-                });
-            },
-        
+        function ({ addUtilities }) {
+            addUtilities({
+                ".hide-scrollbar": {
+                    "scrollbar-width": "none" /* Firefox */,
+                    "-ms-overflow-style": "none" /* Internet Explorer 10+ */,
+                },
+                ".hide-scrollbar::-webkit-scrollbar": {
+                    display: "none" /* Safari and Chrome */,
+                },
+            });
+        },
     ],
 };

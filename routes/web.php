@@ -13,3 +13,5 @@ Route::get('/dummy', function () {
 Route::get('/fmm', function () {
     return view('fmm', ['title' => 'Find My Makeup.']);
 })->name('fmm');
+
+
