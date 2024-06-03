@@ -9,7 +9,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>{{ $title }}</title>
 </head>
-<body class="h-full hide-scrollbar  ">
+<body class="h-full hide-scrollbar w-full">
     <!--
   This example requires updating your template:
 
@@ -18,17 +18,18 @@
   <body class="h-full">
   ```
 -->
-<div class="min-h-full" x-data="{ isOpen: false }">
+<div class="min-h-screen flex flex-col " x-data="{ isOpen: false }" style="background: linear-gradient(to bottom, #fcf097, #f2adec);">
   <x-navbar>{{ $title }}</x-navbar>
 
  <x-header>{{ $title }}</x-header>
   <main>
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <div class="py-6 w-screen flex-grow" >
       <!-- Your content -->
       {{ $slot }}
     </div>
   </main>
+
 </div>
-<x-footer>{{ $title }}</x-footer>
+  <x-footer>{{ $title }}</x-footer>
 </body>
 </html>
