@@ -2,12 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
 use App\Models\User;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Review;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Skintone;
 use App\Models\Undertone;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -68,11 +71,23 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
-            'nama' => 'Blush'
+            'nama' => 'Face'
         ]);
 
         Category::create([
-            'nama' => 'Countour'
+            'nama' => 'Powder'
         ]);
+
+        $sandhika = User::create([
+            'name' => 'sandhikagalih',
+            'email' => 'sandhikagalih@gmail.com',
+            'password' => Hash::make('password')
+        ]);
+
+        Review::factory(30)->recycle([
+            Product::factory(10)->create(),
+            $sandhika,
+            User::factory(4)->create()
+        ])->create();
     }
 }

@@ -20,8 +20,8 @@ class ReviewFactory extends Factory
     {
         return [
             'isi' => fake()->text(),
-            // 'user_id' => User::factory(),
-            // 'product_id' => Product::factory()
+            'user_id' => User::factory(),
+            'product_id' => Product::factory()
         ];
     }
 }
