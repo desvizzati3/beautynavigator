@@ -1,150 +1,131 @@
-<x-layout>
-    <x-slot:title>{{ $title }}</x-slot>
-    <div class="flex items-center justify-center">
-        <div class="text-white mt-10 p-10 rounded-lg shadow-lg flex items-center justify-between max-w-4xl w-full" style="background: linear-gradient(to left, #ffffff, #c93b76);">
-            <div class="space-y-6">
-                <div>
-                    <div class="text-4xl font-bold font-stonewaller">Welcome!</div>
-                    <p class="mt-4 text-xl text-white-300 w-1/2">Please insert your Undertone and Skintone <3!</p>
-                </div>
+<x-app-layout>
+    <section class="flex flex-col min-h-screen bg-center bg-cover bg-fixed bg-blend-overlay bg-white/50" style="background-image: url('{{ asset('fmm_bg.jpg') }}')">
+        <div class="text-white p-8 max-w-lg ml-32 mt-[80px]">
+            <div class="text-left mb-6">
+                <h2 class="text-7xl font-abril font-bold text-rose-900">Find My Makeup!</h2>
+                <p class="text-rose-800 mt-3 font-medium font-abril text-2xl drop-shadow-2xl">Let us know your skin tone and undertone to find the perfect products for you!</p>
             </div>
-            <div class="bg-pink-400 p-8 rounded-lg shadow-md w-3/4 h-128">
-                <div class="text-xl font-bold mb-4">Your Skintone & Undertone</div>
-                <form>
-                    <div class="mb-4">
-                        <label class="block text-white mb-2" for="undertone">Your Undertone</label>
-                        <select id="undertone" name="undertone" class="w-full p-2 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 cursor-pointer">
-                            
-                                <option value="Warm" >Warm</option>
-                                <option value="Neutral" >Neutral</option>
-                                <option value="Cool" >Cool</option>
-                            
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-white mb-2" for="skintone">Your Skintone</label>
-                        <select id="skintone" name="skintone" class="w-full p-2 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 cursor-pointer">
-                            <option value="Fair">Fair</option>
-                            <option value="Light">Light</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Tan">Tan</option>
-                            <option value="Deep">Deep</option>
-                        </select>
-                    </div>
-                    <button type="submit" onclick="showProductResult(event)" class="w-full bg-gradient-to-r bg-yellow-300 text-custom-color-text-2 py-2 px-4 rounded-lg hover:bg-yellow-400 hover:text-white mt-5 font-bold">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Result -->
-    <div id="productResult" class="mt-20 w-screen bg-yellow-200 mb-0" style="display: none;">
-        <div class="justify-center items-center flex mt-0">
-            <h1 class="text-6xl font-bold text-custom-color-text-2 font-stonewaller mt-10">Your Perfect Match</h1>
-        </div>
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap gap-10 justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- Product 1 -->
-                <div class="p-6 rounded-lg shadow-lg bg-cyan-100 w-64 flex flex-col">
-                    <img src="https://via.placeholder.com/150" alt="Somethinc Hooman Cushion" class="w-full h-40 object-cover mb-4 rounded">
-                    <div style="height: 3rem;">
-                        <h3 class="text-lg font-medium text-custom-color-text mb-2">Somethinc Hooman Cushion</h3>
-                    </div>
-                    <div class="mt-auto">
-                        <p class="text-custom-color-text mb-2 font-bold" name="shade">Bijoux</p>
-                        <p class="text-custom-color-text mb-2 text-xs" name="undertone">Warm</p>
-                        <p class="text-custom-color-text mb-2 text-xs mt-0" name="skintone">Light</p>
-                        <p class="text-custom-color-text mb-2 text-xs mt-0" name="categories">Cushion/Foundation</p>
-                        <!-- Rating stars -->
-                        <div class="flex items-center">
-                            <div class="flex items-center">
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
+            <form>
+                <div class="mb-4">
+                    <div class="relative inline-block text-left w-full">
+                        <button type="button" class="inline-flex items-center w-full h-10 justify-center gap-x-1.5 rounded-md bg-white text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-gray-700" id="menu-button-skintone" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown('menu-skintone', 'menu-button-skintone')">
+                            <span id="dropdown-selected-skintone">Skintone</span>
+                            <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button-skintone" id="menu-skintone">
+                            <div class="py-1" role="none">
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('Fair - Light', 'dropdown-selected-skintone', 'menu-skintone', 'menu-button-skintone')">Fair - Light</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('Medium - Tan', 'dropdown-selected-skintone', 'menu-skintone', 'menu-button-skintone')">Medium - Tan</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('Dark - Deep', 'dropdown-selected-skintone', 'menu-skintone', 'menu-button-skintone')">Dark - Deep</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('All', 'dropdown-selected-skintone', 'menu-skintone', 'menu-button-skintone')">All</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Product 2 -->
-                <div class="p-6 rounded-lg shadow-lg bg-cyan-100 w-64 flex flex-col">
-                    <img src="https://via.placeholder.com/150" alt="Somethinc Hooman Breathable Cushion" class="w-full h-40 object-cover mb-4 rounded">
-                    <div style="height: 3rem;">
-                        <h3 class="text-lg font-medium text-custom-color-text mb-2">Somethinc Hooman Breathable Cushion</h3>
-                    </div>
-                    <div class="mt-auto">
-                        <p class="text-custom-color-text mb-2 font-bold" name="shade">Parfait</p>
-                        <p class="text-custom-color-text mb-2 text-xs" name="undertone">Cool</p>
-                        <p class="text-custom-color-text mb-2 text-xs mt-0" name="skintone">Fair</p>
-                        <p class="text-custom-color-text mb-2 text-xs mt-0" name="categories">Cushion/Foundation</p>
-                        <!-- Rating stars -->
-                        <div class="flex items-center">
-                            <div class="flex items-center">
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
+                <div class="mb-4">
+                    <div class="relative inline-block text-left w-full">
+                        <button type="button" class="inline-flex items-center w-full h-10 justify-center gap-x-1.5 rounded-md bg-white text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-gray-700" id="menu-button-undertone" aria-expanded="false" aria-haspopup="true" onclick="toggleDropdown('menu-undertone', 'menu-button-undertone')">
+                            <span id="dropdown-selected-undertone">Undertone</span>
+                            <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button-undertone" id="menu-undertone">
+                            <div class="py-1" role="none">
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('Cool', 'dropdown-selected-undertone', 'menu-undertone', 'menu-button-undertone')">Cool</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('Neutral', 'dropdown-selected-undertone', 'menu-undertone', 'menu-button-undertone')">Neutral</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('Warm', 'dropdown-selected-undertone', 'menu-undertone', 'menu-button-undertone')">Warm</a>
+                                <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900" role="menuitem" tabindex="-1" onclick="selectOption('All', 'dropdown-selected-undertone', 'menu-undertone', 'menu-button-undertone')">All</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Product 3 -->
-                <div class="p-6 rounded-lg shadow-lg bg-cyan-100 w-64 flex flex-col">
-                    <img src="https://via.placeholder.com/150" alt="Emina Bare With Me Mineral Compact Powder" class="w-full h-40 object-cover mb-4 rounded">
-                    <div style="height: 3rem;">
-                        <h3 class="text-lg font-medium text-custom-color-text mb-2">Emina Bare With Me Mineral Compact Powder</h3>
-                    </div>
-                    <div class="mt-auto">
-                        <p class="text-custom-color-text mb-2 font-bold" name="shade">Latte</p>
-                        <p class="text-custom-color-text mb-2 text-xs" name="undertone">Neutral</p>
-                        <p class="text-custom-color-text mb-2 text-xs mt-0" name="skintone">Medium</p>
-                        <p class="text-custom-color-text mb-2 text-xs mt-0" name="categories">Powder</p>
-                        <!-- Rating stars -->
-                        <div class="flex items-center">
-                            <div class="flex items-center">
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                                <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-3.09 1.64.59-3.45-2.5-2.43 3.46-.5L10 6l1.54 3.16 3.46.5-2.5 2.43.59 3.45z"/></svg>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-4">
+                    <button type="button" class="w-32 h-10 bg-rose-400 shadow-xl text-white text-sm font-semibold rounded-full hover:bg-rose-800 hover:text-gray-300" onclick="submitSelections()">Submit</button>
                 </div>
-                <!-- Add more products as needed -->
+            </form>
+        </div>
+    </section>
+
+    <!---Products Recomandation--->
+    <section id="results-section" class="hidden bg-white p-8">
+        <div class="bg-rose-200 p-[30px] justify-center rounded-xl drop-shadow-2xl items-center flex flex-col">
+            <div class="text-center mb-6">
+                <h2 class="text-4xl font-bold text-gray-800 font-abril">Your Recommended Products</h2>
+            </div>
+            <div id="results-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Product recommendations will be inserted here -->
+                
+            </div>
+            <div class="justify-center items-center flex mt-6">
+                <button onclick="window.location.href='{{ route('fmm') }}';" class="bg-white shadow-lg hover:bg-rose-800 hover:text-white font-bold font-abril  text-rose-800 rounded-full w-28 h-10">
+                    Finish!
+                </button>
             </div>
         </div>
-    </div>
-
-    <!---Thank You---->
-    <div class="flex justify-center items-center">
-    <div id="thankYouSection"  class="flex flex-col  justify-center items-center mt-10 mb-10" style="display: none;">
-        <h1 class="text-5xl font-bold font-stonewaller text-white ">Thank You for Using Our Feature! 💖 </h1>
-        <p class="mt-3 text-white font-bold text-xl font-stonewaller">-xo, Beauty Navigator 💌</p>
-
-        <button 
-            type="button" class="bg-yellow-200 hover:bg-pink-600 hover:text-white text-custom-color-text-2 font-bold py-2 px-4 rounded-full w-60 h-10 flex items-center justify-center mt-5" onclick="window.location.href='{{ route('fmm') }}';">
-                           Finish!
-        </button>
-    </div>
+    </section>
     
-
-
-   <script>
-    function showProductResult(event) {
-        event.preventDefault();
-        document.getElementById('productResult').style.display = 'block';
-        document.getElementById('thankYouSection').style.display = 'block';
-        document.getElementById('form').style.display = 'none';
+</x-app-layout>
+<script>
+    function toggleDropdown(menuId, buttonId) {
+        const menu = document.getElementById(menuId);
+        const button = document.getElementById(buttonId);
+        const isOpen = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', !isOpen);
+        button.setAttribute('aria-expanded', isOpen);
     }
 
-    function resetForm() {
-        document.getElementById('productResult').style.display = 'none';
-        document.getElementById('thankYouSection').style.display = 'none';
-        document.getElementById('form').style.display = 'block';
-        document.getElementById('form').reset();
+    function selectOption(option, selectedId, menuId, buttonId) {
+        document.getElementById(selectedId).innerText = option;
+        document.getElementById(menuId).classList.add('hidden');
+        document.getElementById(buttonId).setAttribute('aria-expanded', 'false');
+    }
+
+    function submitSelections() {
+        const skintone = document.getElementById('dropdown-selected-skintone').innerText;
+        const undertone = document.getElementById('dropdown-selected-undertone').innerText;
+
+        // Show the results section
+        const resultsSection = document.getElementById('results-section');
+        resultsSection.classList.remove('hidden');
+
+        // Add product recommendations
+        const resultsContent = document.getElementById('results-content');
+        resultsContent.innerHTML = `
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">Product 1</h3>
+                <p class="text-gray-600">Recommended for ${skintone} skin tone and ${undertone} undertone.</p>
+            </div>
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">Product 2</h3>
+                <p class="text-gray-600">Recommended for ${skintone} skin tone and ${undertone} undertone.</p>
+            </div>
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800">Product 3</h3>
+                <p class="text-gray-600">Recommended for ${skintone} skin tone and ${undertone} undertone.</p>
+            </div>
+        `;
+    }
+
+    // Close dropdown when clicking outside
+    window.onclick = function(event) {
+        if (!event.target.matches('#menu-button-skintone') && !event.target.matches('#menu-button-undertone') && !event.target.matches('#menu-skintone a') && !event.target.matches('#menu-undertone a')) {
+            const menuSkintone = document.getElementById('menu-skintone');
+            const menuButtonSkintone = document.getElementById('menu-button-skintone');
+            const menuUndertone = document.getElementById('menu-undertone');
+            const menuButtonUndertone = document.getElementById('menu-button-undertone');
+
+            if (!menuSkintone.classList.contains('hidden')) {
+                menuSkintone.classList.add('hidden');
+                menuButtonSkintone.setAttribute('aria-expanded', 'false');
+            }
+
+            if (!menuUndertone.classList.contains('hidden')) {
+                menuUndertone.classList.add('hidden');
+                menuButtonUndertone.setAttribute('aria-expanded', 'false');
+            }
+        }
     }
 </script>
-</x-layout>
