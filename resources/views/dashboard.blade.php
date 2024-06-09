@@ -64,8 +64,8 @@
                 </div>
 
                 <!-- Recent Articles Section -->
-                <div class="w-full lg:w-1/4 bg-white drop-shadow-2xl rounded-xl p-5">
-                    <h2 class="font-bold text-4xl font-abril mb-2 text-rose-800">What's in BeNav.</h2>
+                <div class="w-full lg:w-1/4 bg-white drop-shadow-2xl justify-center items-center  rounded-xl p-5">
+                    <h2 class="font-bold text-3xl font-abril mb-2 text-rose-800">What's in BeauNav.</h2>
                     <div class="justify-center items-center flex">
                         <ul class="mt-5 justify-center items-center text-center text-xl font-abril ">
                             <li class="mb-2 font-italic">Product Reviews</li>

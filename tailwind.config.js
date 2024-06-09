@@ -7,15 +7,16 @@ export default {
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
+        "./node_modules/flowbite/**/*.js",
     ],
 
     theme: {
         extend: {
-             fontSize: {
-        '10xl': '10rem',
-        '11xl': '11rem',
-        '12xl': '12rem',
-                },
+            fontSize: {
+                "10xl": "10rem",
+                "11xl": "11rem",
+                "12xl": "12rem",
+            },
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 dm: ["DM Serif Display"],
@@ -24,5 +25,5 @@ export default {
         },
     },
 
-    plugins: [forms],
+    plugins: [require("flowbite/plugin")],
 };

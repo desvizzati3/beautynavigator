@@ -1,6 +1,6 @@
 <x-app-layout>
     <section class="flex flex-col min-h-screen bg-center bg-cover bg-fixed bg-blend-overlay bg-white/50" style="background-image: url('{{ asset('fmm_bg.jpg') }}')">
-        <div class="text-white p-8 max-w-lg ml-32 mt-[80px]">
+        <div class=" p-8 max-w-lg ml-32 mt-[80px]">
             <div class="text-left mb-6">
                 <h2 class="text-7xl font-abril font-bold text-rose-900">Find My Makeup!</h2>
                 <p class="text-rose-800 mt-3 font-medium font-abril text-2xl drop-shadow-2xl">Let us know your skin tone and undertone to find the perfect products for you!</p>
