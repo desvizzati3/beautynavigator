@@ -14,7 +14,7 @@
                 @foreach ($products as $product)
                     <article class="bg-rose-100 shadow-md rounded-lg overflow-hidden">
                         <a href="/products/{{ $product->id }}" class="hover:underline font-abril">
-                            <img src="{{ $product->image }}" alt="{{ $product->nama_produk }}"
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->nama_produk }}"
                                 class="w-full h-48 object-cover rounded-lg border-[3px] border-rose-800">
                             <div class="p-4">
                                 <h3 class="text-lg font-semibold font-abril">{{ $product->nama_produk }}</h3>

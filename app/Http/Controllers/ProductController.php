@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Skintone;
 use App\Models\Undertone;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -41,11 +42,15 @@ class ProductController extends Controller
             'nama_produk' => 'required|max:20',
             'brand' => 'required',
             'deskripsi' => 'required',
-            'image' => 'image|file|max:1024',
+            'image' => 'image',
             'skintone_id' => 'required',
             'undertone_id' => 'required',
             'category_id' => 'required'
         ]);
+
+        if ($request->file('image')) {
+            $validateData['image'] = $request->file('image')->store('post-image');
+        }
 
         Product::create($validateData);
 
@@ -83,11 +88,18 @@ class ProductController extends Controller
             'nama_produk' => 'required|max:20',
             'brand' => 'required',
             'deskripsi' => 'required',
-            'image' => 'image|file|max:1024',
+            'image' => 'image',
             'skintone_id' => 'required',
             'undertone_id' => 'required',
             'category_id' => 'required'
         ]);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validateData['image'] = $request->file('image')->store('post-image');
+        }
 
         Product::where('id', $product->id)->update($validateData);
 
@@ -105,6 +117,10 @@ class ProductController extends Controller
         // Hapus setiap review yang terkait dengan produk
         foreach ($reviews as $review) {
             $review->delete();
+        }
+
+        if ($product->image) {
+            Storage::delete($product->image);
         }
 
         // Hapus produk itu sendiri

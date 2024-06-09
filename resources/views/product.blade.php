@@ -12,9 +12,9 @@
 
             <div class="flex flex-col items-center p-8">
                 <!-- Gambar Produk -->
-                <div class="w-full md:w-1/3 drop-shadow-2xl">
+                <div class="drop-shadow-2xl h-[400px] w-[300px]">
                     <img class="h-full w-full object-cover rounded-lg border-[3px] border-rose-700"
-                        src="{{ asset('categories/eye.jpeg') }}" alt="Product Image">
+                        src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
                 </div>
 
                 <!-- Tombol Add Review -->
