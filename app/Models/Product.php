@@ -11,7 +11,10 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama_produk', 'brand'];
+    // protected $fillable = ['nama_produk', 'brand', 'image', 'deskirpsi', 'category_id', 'skintone_id', 'undertone_id'];
+
+    protected $guarded = ['id'];
+
 
     public function review(): HasMany
     {
@@ -32,6 +35,4 @@ class Product extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
-    
 }

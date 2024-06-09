@@ -59,23 +59,28 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
-            'nama' => 'Complexion'
+            'nama' => 'Complexion',
+            'image' => 'categories/complexion.jpeg'
         ]);
 
         Category::create([
-            'nama' => 'Lip'
+            'nama' => 'Lip',
+            'image' => 'categories/lip.jpeg'
         ]);
 
         Category::create([
-            'nama' => 'Eye'
+            'nama' => 'Eye',
+            'image' => 'categories/eye.jpeg'
         ]);
 
         Category::create([
-            'nama' => 'Face'
+            'nama' => 'Face',
+            'image' => 'categories/face.jpeg'
         ]);
 
         Category::create([
-            'nama' => 'Powder'
+            'nama' => 'Powder',
+            'image' => 'categories/powder.jpeg'
         ]);
 
         $sandhika = User::create([
