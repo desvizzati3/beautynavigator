@@ -6,7 +6,7 @@
             <!-- Tombol Back -->
             <button
                 class="absolute top-4 left-4 bg-white hover:bg-rose-800 text-gray-700 hover:text-white font-abril font-bold py-2 px-4 rounded-full shadow-lg"
-                onclick="window.location.href='{{ route('products') }}';">
+                onclick="window.history.back()">
                 X
             </button>
 
