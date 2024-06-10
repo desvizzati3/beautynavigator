@@ -17,8 +17,21 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $query = Product::query();
+
+        if (request('search')) {
+            $query->where('nama_produk', 'like', '%' . request('search') . '%')
+                ->orWhere('brand', 'like', '%' . request('search') . '%');
+        }
+
+        $products = $query->get();
+
+        return view('products', [
+            'products' => $products,
+            'title' => 'Products'
+        ]);
     }
+
 
     /**
      * Show the form for creating a new resource.

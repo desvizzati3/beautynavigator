@@ -55,8 +55,14 @@ Route::middleware('auth')->group(function () {
     })->middleware(['auth', 'verified']);
 
     Route::resource('/product', ProductController::class)->middleware(IsAdmin::class);
+
+    Route::post('/products/{product}/review', [ReviewController::class, 'store'])->name('review.store');
+
     // Route::resource('/review', ReviewController::class)->middleware('auth');
-    Route::post('/products/{product:id}/reviews', [ReviewController::class, 'store'])->name('products.reviews.store');
+    //Route::post('/review', [ReviewController::class, 'store']);
+
+    Route::get('/products', [ProductController::class, 'index'])->middleware(['auth', 'verified'])->name('products');
+
 
     Route::post('/find-my-makeup/results', [MakeupController::class, 'getResults'])->name('find-my-makeup.results');
 });

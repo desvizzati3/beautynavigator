@@ -67,8 +67,8 @@
                         @else
                             @foreach ($product->review as $review)
                                 <div class="mb-4 border-b pb-4 border-gray-300">
-                                    <p class="text-lg font-abril text-gray-700">Ditulis oleh:
-                                        {{ $review->user->username }}</p>
+                                    <p class="text-l font-abril font-semibold text-gray-700">Ditulis oleh:
+                                        {{ $review->user->name }}</p>
                                     <p class="text-lg font-abril font-medium text-gray-800">{{ $review->isi }}</p>
                                     <p class="text-sm font-abril text-gray-500">
                                         {{ $review->created_at->format('j F Y') }}</p>
@@ -92,10 +92,9 @@
             <h2 class="text-2xl font-bold font-abril text-rose-800">Submit Review</h2>
             <button onclick="closePopup()" class="text-gray-500 hover:text-gray-800">&times;</button>
         </div>
-        <form action="{{ route('products.reviews.store', $product) }}" method="POST" id="review-form"
-            onsubmit="submitReview(event)">
+        <form action="{{ route('review.store', $product->id) }}" method="POST" id="review-form">
             @csrf
-            <textarea id="review" name="review" placeholder="Enter your review for this product"
+            <textarea id="review" name="isi" placeholder="Enter your review for this product"
                 class="w-full p-2 border font-abril border-gray-300 rounded-lg mb-4" required></textarea>
             <button type="submit"
                 class="bg-rose-800 text-white hover:bg-rose-400 shadow-xl font-abril w-full py-2 rounded-lg">Submit</button>

@@ -48,8 +48,15 @@
                                 <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
                                 <input type="hidden" name="oldImage" value="{{ $product->image }}">
                                 @if ($product->image)
-                                    <img src="{{ asset('storage/' . $product->image) }}"
-                                        alt="{{ $product->nama_produk }}"
+                                    @php
+                                        $imagePath = '';
+                                        if (strpos($product->image, 'produk/') === 0) {
+                                            $imagePath = asset($product->image);
+                                        } else {
+                                            $imagePath = asset('storage/' . $product->image);
+                                        }
+                                    @endphp
+                                    <img src="{{ $imagePath }}" alt="{{ $product->nama_produk }}"
                                         class="img-preview flex w-auto mb-3 h-[100px] sm:col-span-5">
                                 @else
                                     <img class="img-preview flex w-auto mb-3 h-[100px] sm:col-span-5"
