@@ -13,7 +13,19 @@
             <div class="flex flex-col items-center p-8">
                 <!-- Gambar Produk -->
                 <div class="drop-shadow-2xl h-[400px] w-[300px]">
-                    <img class="h-full w-full object-cover rounded-lg border-[3px] border-rose-700"
+                    @php
+                        // Menentukan path gambar
+                        $imagePath = '';
+                        if (strpos($product->image, 'produk/') === 0) {
+                            // Jika gambar ada di folder 'produk/'
+                            $imagePath = asset($product->image);
+                        } else {
+                            // Jika gambar ada di folder 'storage/post-images'
+                            $imagePath = asset('storage/' . $product->image);
+                        }
+                    @endphp
+                    <img src="{{ $imagePath }}"
+                        alt="{{ $product->nama_produk }}"class="h-full w-full object-cover rounded-lg border-[3px] border-rose-700"
                         src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
                 </div>
 
@@ -29,7 +41,14 @@
                     <h2 class="text-3xl font-abril tracking-tight font-bold text-gray-900">{{ $product['nama_produk'] }}
                     </h2>
                     <span class="text-xl font-abril font-semibold text-gray-700">Rp.
-                        {{ number_format($product['harga'], 0, ',', '.') }}</span>
+                        {{ $product->harga }}</span>
+                </div>
+
+                <!-- Detail -->
+                <div class="mb-8">
+                    <p class="text-lg font-abril text-gray-700">Brand: {{ $product->brand }}</p>
+                    <p class="text-lg font-abril text-gray-700">Skintone: {{ $product->skintone->nama }}</p>
+                    <p class="text-lg font-abril text-gray-700">Undertone: {{ $product->undertone->nama }}</p>
                 </div>
 
                 <!-- Deskripsi Produk -->

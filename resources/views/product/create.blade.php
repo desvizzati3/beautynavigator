@@ -34,6 +34,14 @@
                                     required></textarea>
                             </div>
 
+                            <!-- Input Nama Brand -->
+                            <div class="mb-4">
+                                <label for="harga" class="block text-sm font-medium text-gray-700">Harga</label>
+                                <input type="text" name="harga" id="harga"
+                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                    required>
+                            </div>
+
                             <!-- Input Gambar -->
                             <div class="mb-4">
                                 <label for="image" class="block text-sm font-medium text-gray-700">Image</label>

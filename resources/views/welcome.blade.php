@@ -81,9 +81,9 @@
 
                     <!-- Settings Dropdown -->
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
-                        <a href="{{ route('register') }}">
+                        <a href="{{ route('login') }}">
                             <button class="bg-rose-700 hover:bg-rose-400 text-white font-bold py-2 px-4 rounded">
-                                {{ __('Register') }}
+                                {{ __('Login') }}
                             </button>
                         </a>
                         <div>
@@ -234,7 +234,7 @@
 
                     <button type="button"
                         class="bg-rose-50  shadow-lg hover:bg-rose-400 hover:border-rose-400 hover:text-white text-stone-600 font-bold py-2 px-4 rounded-full  border-[3px] border-rose-300 w-60 h-10 flex items-center justify-center mt-6"
-                        onclick="window.location.href='{{ route('register') }}';">
+                        onclick="window.location.href='{{ route('login') }}';">
                         Find My Makeup!
                     </button>
 
@@ -252,7 +252,7 @@
                 </div>
                 <div
                     class="max-w-4xl mx-auto grid grid-cols-5 gap-10 mt-10 justify-center items-center mb-10 text-custom-color-text">
-                    <a href="{{ route('register') }}" class="flex flex-col items-center overflow-hidden">
+                    <a href="{{ route('login') }}" class="flex flex-col items-center overflow-hidden">
                         <div
                             class="h-[200px] w-[150px] flex justify-center items-center border-[5px] border-rose-900 drop-shadow-xl rounded-full">
                             <img src="{{ asset('categories/complexion.jpeg') }}"
@@ -260,7 +260,7 @@
                         </div>
                         <p class="mt-2 text-xl font-bold font-abril">Complexion</p>
                     </a>
-                    <a href="{{ route('register') }}" class="flex flex-col items-center overflow-hidden">
+                    <a href="{{ route('login') }}" class="flex flex-col items-center overflow-hidden">
                         <div
                             class="h-[200px] w-[150px] flex justify-center items-center border-[5px] border-rose-900 drop-shadow-xl rounded-full">
                             <img src="{{ asset('categories/eye.jpeg') }}"
@@ -268,7 +268,7 @@
                         </div>
                         <p class="mt-2 text-xl font-bold font-abril">Eye</p>
                     </a>
-                    <a href="{{ route('register') }}" class="flex flex-col items-center overflow-hidden">
+                    <a href="{{ route('login') }}" class="flex flex-col items-center overflow-hidden">
                         <div
                             class="h-[200px] w-[150px] flex justify-center items-center border-[5px] border-rose-900 drop-shadow-xl rounded-full">
                             <img src="{{ asset('categories/lip.jpeg') }}"
@@ -276,7 +276,7 @@
                         </div>
                         <p class="mt-2 text-xl font-bold font-abril">Lip</p>
                     </a>
-                    <a href="{{ route('register') }}" class="flex flex-col items-center overflow-hidden">
+                    <a href="{{ route('login') }}" class="flex flex-col items-center overflow-hidden">
                         <div
                             class="h-[200px] w-[150px] flex justify-center items-center border-[5px] border-rose-900 drop-shadow-xl rounded-full">
                             <img src="{{ asset('categories/face.jpeg') }}"
@@ -284,7 +284,7 @@
                         </div>
                         <p class="mt-2 text-xl font-bold font-abril">Face</p>
                     </a>
-                    <a href="{{ route('register') }}" class="flex flex-col items-center overflow-hidden">
+                    <a href="{{ route('login') }}" class="flex flex-col items-center overflow-hidden">
                         <div
                             class="h-[200px] w-[150px] flex justify-center items-center border-[5px] border-rose-900 drop-shadow-xl rounded-full">
                             <img src="{{ asset('categories/powder.jpeg') }}"

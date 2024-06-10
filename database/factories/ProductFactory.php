@@ -23,6 +23,7 @@ class ProductFactory extends Factory
             'nama_produk' => fake()->sentence(rand(2, 3), false),
             'brand' => fake()->word(),
             'deskripsi' => fake()->text(),
+            'harga' => fake()->text(),
             'skintone_id' => Skintone::inRandomOrder()->first()->id,
             'undertone_id' => Undertone::inRandomOrder()->first()->id,
             'category_id' => Category::inRandomOrder()->first()->id,
