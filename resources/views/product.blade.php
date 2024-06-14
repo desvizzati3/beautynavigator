@@ -46,9 +46,9 @@
 
                 <!-- Detail -->
                 <div class="mb-8">
-                    <p class="text-lg font-abril text-gray-700">Brand: {{ $product->brand }}</p>
-                    <p class="text-lg font-abril text-gray-700">Skintone: {{ $product->skintone->nama }}</p>
-                    <p class="text-lg font-abril text-gray-700">Undertone: {{ $product->undertone->nama }}</p>
+                    <p class="text-lg font-abril text-gray-700"><b>Brand:</b> {{ $product->brand }}</p>
+                    <p class="text-lg font-abril text-gray-700"><b>Skintone:</b> {{ $product->skintone->nama }}</p>
+                    <p class="text-lg font-abril text-gray-700"><b>Undertone:</b> {{ $product->undertone->nama }}</p>
                 </div>
 
                 <!-- Deskripsi Produk -->
