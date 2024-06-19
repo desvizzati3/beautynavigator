@@ -72,6 +72,14 @@
                                     <p class="text-lg font-abril font-medium text-gray-800">{{ $review->isi }}</p>
                                     <p class="text-sm font-abril text-gray-500">
                                         {{ $review->created_at->format('j F Y') }}</p>
+
+                                    @can('admin')
+                                        <form action="{{ route('review.destroy', $review->id) }}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <button onclick="return confirm('Are you sure?')">Delete</button>
+                                        </form>
+                                    @endcan
                                 </div>
                             @endforeach
                         @endif

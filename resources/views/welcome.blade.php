@@ -63,29 +63,20 @@
                         </div>
                     </div>
 
-                    <!-- Search Bar -->
-                    <div class="flex-grow flex items-center justify-center mx-10 ">
-                        <form action="/search" method="GET" class="w-[600px] flex">
-                            <input type="text" name="query" class="w-2/3 rounded-md  shadow-sm border-none"
-                                placeholder="Search...">
-                            <button type="submit"
-                                class="ml-2 bg-rose-800 hover:bg-rose-600 text-white rounded-md px-4 py-2">
-                                <svg xmlns="https://img.icons8.com/?size=100&id=132&format=png&color=000000"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-
                     <!-- Settings Dropdown -->
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
-                        <a href="{{ route('login') }}">
-                            <button class="bg-rose-700 hover:bg-rose-400 text-white font-bold py-2 px-4 rounded">
-                                {{ __('Login') }}
-                            </button>
-                        </a>
+                        <div class="gap-5">
+                            <a href="{{ route('register') }}">
+                                <button class="bg-rose-700 hover:bg-rose-400 text-white font-bold py-2 px-4 rounded">
+                                    {{ __('Register') }}
+                                </button>
+                            </a>
+                            <a href="{{ route('login') }}">
+                                <button class="bg-rose-700 hover:bg-rose-400 text-white font-bold py-2 px-4 rounded">
+                                    {{ __('Login') }}
+                                </button>
+                            </a>
+                        </div>
                         <div>
 
                             <!-- Hamburger -->
@@ -174,8 +165,8 @@
                             </svg>
                         </button>
                         <button class="absolute right-4 bg-rose-200 p-2 rounded-full shadow-md" onclick="nextSlide()">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 5l7 7-7 7" />
                             </svg>

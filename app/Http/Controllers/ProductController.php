@@ -23,7 +23,6 @@ class ProductController extends Controller
             $query->where('nama_produk', 'like', '%' . request('search') . '%')
                 ->orWhere('brand', 'like', '%' . request('search') . '%');
         }
-
         $products = $query->get();
 
         return view('products', [

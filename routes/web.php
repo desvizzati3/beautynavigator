@@ -58,8 +58,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/products/{product}/review', [ReviewController::class, 'store'])->name('review.store');
 
-    // Route::resource('/review', ReviewController::class)->middleware('auth');
-    //Route::post('/review', [ReviewController::class, 'store']);
+    Route::delete('review/{review:id}', [ReviewController::class, 'destroy'])->name('review.destroy');
 
     Route::get('/products', [ProductController::class, 'index'])->middleware(['auth', 'verified'])->name('products');
 

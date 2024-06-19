@@ -45,7 +45,7 @@
                                 <a href="#"
                                     class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
                                     role="menuitem" tabindex="-1"
-                                    onclick="selectOption('All', 'All', 'dropdown-selected-skintone', 'menu-skintone', 'menu-button-skintone')">All</a>
+                                    onclick="selectOption(4, 'All', 'dropdown-selected-skintone', 'menu-skintone', 'menu-button-skintone')">All</a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                                 <a href="#"
                                     class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900"
                                     role="menuitem" tabindex="-1"
-                                    onclick="selectOption('All', 'All', 'dropdown-selected-undertone', 'menu-undertone', 'menu-button-undertone')">All</a>
+                                    onclick="selectOption(4, 'All', 'dropdown-selected-undertone', 'menu-undertone', 'menu-button-undertone')">All</a>
                             </div>
                         </div>
                     </div>
