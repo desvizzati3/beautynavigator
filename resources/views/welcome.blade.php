@@ -181,21 +181,20 @@
                     </div>
 
                     <!-- Recent Articles Section -->
-                    <div class="w-full lg:w-1/4 bg-white rounded-xl justify-center items-center p-5">
-                        <h2 class="font-bold text-3xl font-abril mb-2 text-rose-800">What's in BeauNav.</h2>
-                        <div class="justify-center items-center flex">
-                            <ul class="mt-5 justify-center items-center text-center text-xl font-abril ">
-                                <li class="mb-2 font-italic">Product Reviews</li>
-                                <li class="mb-2 font-italic">Find My Makeup</li>
-                                <li class="font-italic">and more to discover</li>
-                                <li class="justify-center items-center flex mt-2">
-                                    <img src="logo_bn.png" alt=""
-                                        class="h-9 w-9 justify-center items-center flex">
-                                </li>
+                    <div class="w-full lg:w-1/4 bg-white drop-shadow-2xl justify-center items-center rounded-xl p-5">
+                    <h2 class="font-bold text-3xl font-abril mb-2 text-center text-rose-800">What's in BeauNav.</h2>
+                    <div class="justify-center items-center flex">
+                        <ul class="mt-1 justify-center items-center text-center  text-xl font-abril ">
+                            <li class="mb-2 font-italic bg-rose-100 rounded-full p-1 w-[200px]">Product Reviews</li>
+                            <li class="mb-2 font-italic bg-rose-100 rounded-full p-1 w-[200px]">Find My Makeup</li>
+                            <li class="font-italic text-gray-500">and more to discover</li>
+                            <li class="justify-center items-center flex mt-2">
+                                <img src="logo_bn.png" alt="" class="h-9 w-9 justify-center items-center flex">
+                            </li>
 
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
