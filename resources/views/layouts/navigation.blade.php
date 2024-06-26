@@ -28,13 +28,15 @@
             <div class="flex-grow flex items-center justify-center mx-10">
                 <form action="/products" method="GET" class="w-full sm:w-[600px] flex">
                     <input type="text" name="search" class="w-2/3 rounded-md shadow-sm border-none" placeholder="Search..." value="{{ request('search') }}">
-                    <button type="submit" class="ml-2 bg-rose-800 hover:bg-rose-600 text-white rounded-md px-4 py-2">
-                        <svg xmlns="https://img.icons8.com/?size=100&id=132&format=png&color=000000" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                    <button type="submit" class="ml-2 bg-rose-800 hover:bg-rose-600 text-white rounded-md px-4 py-2 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0114 0z"></path>
                         </svg>
                     </button>
                 </form>
             </div>
+
+
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

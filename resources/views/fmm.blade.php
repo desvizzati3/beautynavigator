@@ -103,7 +103,7 @@
             <div class="text-center mb-6">
                 <h2 class="text-4xl font-bold text-gray-800 font-abril">Your Recommended Products</h2>
             </div>
-            <div id="results-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div id="results-content" class="flex grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center">
                 <!-- Product recommendations will be inserted here -->
             </div>
             <div class="justify-center items-center flex mt-6">
