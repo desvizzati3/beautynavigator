@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_produk');
             $table->string('brand');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('harga');
             $table->string('image')->nullable();
             // $table->foreignId('skintone_id')->constrained('skintones')->onDelete('cascade')->indexName('review_skintone_id');
